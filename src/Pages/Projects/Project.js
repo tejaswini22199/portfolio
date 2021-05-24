@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
+import Link from '@material-ui/core/Link'
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -17,33 +17,32 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Project() {
+export default function Project({project}) {
   const classes = useStyles();
-
+  console.log(project);
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={project.Image}
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {project.Title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {project.Description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
+        <Button  size="small" color="primary">
+         <Link href={project.CodeLink}>CodeLink</Link>
         </Button>
         <Button size="small" color="primary">
-          Learn More
+          <Link href={project.LiveProject}> LiveProject</Link>
         </Button>
       </CardActions>
     </Card>

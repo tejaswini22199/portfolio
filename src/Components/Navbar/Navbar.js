@@ -148,9 +148,9 @@ export default function PersistentDrawerLeft() {
                 <ListItemText primary="Projects" />
             </ListItem>
           </NavLink>
-           <NavLink className={classes.link} to="/skills">
+           <NavLink className={classes.link} to="/experience">
               <ListItem button >
-                <ListItemText primary="Skills" />
+                <ListItemText primary="Experience" />
               </ListItem>
             </NavLink>
             <NavLink className={classes.link} to="/resume">
@@ -187,7 +187,7 @@ export default function PersistentDrawerLeft() {
             <Projects/>
             </main>
           </Route>
-          <Route exact path="/skills">
+          <Route exact path="/experience">
           <main
         className={clsx(classes.content, {
           [classes.contentShift]: open,
