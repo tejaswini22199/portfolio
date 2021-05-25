@@ -18,7 +18,8 @@ import {NavLink,BrowserRouter,Route,Switch} from 'react-router-dom'
 import Projects from '../../Pages/Projects/Projects';
 import Home from '../../Pages/Home/Home'
 import Experience from '../../Pages/Experience/Experience'
-import Resume from '../../Pages/Resume' 
+import Achievements from '../../Pages/Achievements/Achievements' 
+import Contact from '../../Pages/Contact/Contact'
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -138,24 +139,29 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
     
-          <NavLink className={classes.link} to="/">
+          <NavLink className={classes.link} onClick={handleDrawerClose} to="/">
             <ListItem button > 
-              <ListItemText primary="Home" />
+              <ListItemText primary="Home"  />
             </ListItem>
           </NavLink>
-          <NavLink className={classes.link} to="/projects">
+          <NavLink className={classes.link} onClick={handleDrawerClose} to="/projects">
              <ListItem button >
                 <ListItemText primary="Projects" />
             </ListItem>
           </NavLink>
-           <NavLink className={classes.link} to="/experience">
+           <NavLink className={classes.link} onClick={handleDrawerClose} to="/experience">
               <ListItem button >
                 <ListItemText primary="Experience" />
               </ListItem>
             </NavLink>
-            <NavLink className={classes.link} to="/resume">
+            <NavLink className={classes.link} onClick={handleDrawerClose} to="/achievements">
                 <ListItem button >
-                <ListItemText primary="Resume" />
+                <ListItemText primary="Achievements" />
+                </ListItem>  
+             </NavLink>
+             <NavLink className={classes.link} onClick={handleDrawerClose} to="/contact">
+                <ListItem button >
+                <ListItemText primary="Contact Me" />
                 </ListItem>  
              </NavLink>
         
@@ -197,8 +203,26 @@ export default function PersistentDrawerLeft() {
             <Experience/>
             </main>
           </Route>
-          <Route exact path="/resume">
-            <Resume/>
+          <Route exact path="/achievements">
+          <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >
+        <div className={classes.drawerHeader} />
+        <Achievements/>
+            </main>
+          </Route>
+          <Route exact path="/contact">
+          <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >
+        <div className={classes.drawerHeader} />
+        <Contact/>
+            </main>
+           
           </Route>
       </Switch>
      
