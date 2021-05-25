@@ -214,15 +214,14 @@ export default function PersistentDrawerLeft() {
             </main>
           </Route>
           <Route exact path="/contact">
-          <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
-        <div className={classes.drawerHeader} />
-        <Contact/>
-            </main>
-           
+              <main
+            className={clsx(classes.content, {
+              [classes.contentShift]: open,
+            })}
+          >
+                <div className={classes.drawerHeader} />
+                <Contact/>
+              </main>
           </Route>
       </Switch>
      
