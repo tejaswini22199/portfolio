@@ -39,8 +39,8 @@ function getStepContent(step) {
       return `Solved doubts of Various students in subjects like Matlab,DBMS,Data Structures and Algoritms`;
     case 3:
       return `Mentored more than 10 students in their Open Source Contributions and taught basics of github`;
-      // default:
-      // return 'Unknown step';
+      default:
+      return 'Unknown step';
   }
 }
 export default function Experience()

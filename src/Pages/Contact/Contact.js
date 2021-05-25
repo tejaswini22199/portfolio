@@ -1,9 +1,9 @@
 import React from 'react'
 // import Link from '@material-ui/core/Link'
-import email from '../../assets/contacticons/email.png'
-import linkedin from '../../assets/contacticons/linkedin.png'
-import medium from '../../assets/contacticons/medium.png'
-import twitter from '../../assets/contacticons/twitter.png'
+// import email from '../../assets/contacticons/email.png'
+// import linkedin from '../../assets/contacticons/linkedin.png'
+// import medium from '../../assets/contacticons/medium.png'
+// import twitter from '../../assets/contacticons/twitter.png'
 import { Typography } from '@material-ui/core'
 const Contact = () => {
     return (
