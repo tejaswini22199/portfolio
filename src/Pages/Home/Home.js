@@ -33,7 +33,7 @@ const Home = () => {
         Hi, I'm Tejaswini. I recently completed my graduation in ECE from NITW. I have worked with various technologies like Web development and App Development. I'm a programmer.
         I'm currently interning as a front-end developer at a start-up. I'm looking for Full-time SDE opportunities. I'm always open to collaborate with like-minded people and do projects.
         </Typography>
-        <Button style={{width:200,margin:20,}}variant="contained" color="primary" href="https://drive.google.com/file/d/18CKrruHOccymYYLHFP0JNjWGNIK1w2yD/view?usp=sharing">
+        <Button style={{width:200,margin:20,}}variant="contained" color="primary" href="https://drive.google.com/file/d/1T_-6-pXO9Pav08AfYpbxqzXXazM6VhKl/view?usp=sharing">
         Resume
         </Button>
         <Button style={{margin:10}} variant="contained" color="default" >
