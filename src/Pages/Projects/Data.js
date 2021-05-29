@@ -4,6 +4,7 @@ import womenhealth from '../../assets/projects/womenhealth.gif'
 export const projects=[
 {
     Title:"Resume Maker",
+    Image:devfolio,
     Description:"Resume Maker is a website where students/working professionals can upload their details and resume will be generated in PDF format.We used Django for backend and HTML,CSS,Java script for frontend",
     Role:"Backend Developer",
     CodeLink:"https://github.com/tejaswini22199/resumemaker",

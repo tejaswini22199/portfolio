@@ -4,14 +4,38 @@ import React from 'react'
 // import linkedin from '../../assets/contacticons/linkedin.png'
 // import medium from '../../assets/contacticons/medium.png'
 // import twitter from '../../assets/contacticons/twitter.png'
-import { Typography } from '@material-ui/core'
+
+import { TextField, Typography,Button } from '@material-ui/core'
+import {makeStyles} from '@material-ui/core/styles'
+const useStyles=makeStyles(()=>({
+    contactform:{
+        display:"flex",
+        flexDirection:"column",
+        margin:20,
+    },
+    formfield:{
+        margin:10,
+    },
+}));
+
+
 const Contact = () => {
+    const classes=useStyles();
     return (
+        <>
         <div>
             
             <Typography>
-            <h1>Looking to collaborate with me or Hire me?Great!</h1>
+            <h3>Looking to collaborate with me or Hire me?Great!</h3>
             <h3>Feel free to Contact me on my socials</h3>
+            </Typography>
+            <form className={classes.contactform} >
+            <TextField className={classes.formfield} required id="standard-basic" label="Name" autoComplete="off" />
+            <TextField className={classes.formfield} required id="standard-multiline-static" multiline rows={5} label="Drop your Message"/>
+            <Button variant="contained"color="primary" >
+                Submit
+            </Button>
+            </form>
                 {/* <Link href="/">
                     <img src={email} alt="email"/>
                 </Link>
@@ -24,9 +48,10 @@ const Contact = () => {
                 <Link href="https://twitter.com/Tejaswi30533550">
                     <img src={twitter} alt="twiter"/>
                 </Link> */}
-            </Typography>
+            
 
         </div>
+        </>
     )
 }
 

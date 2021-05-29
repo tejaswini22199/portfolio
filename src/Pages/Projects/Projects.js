@@ -22,7 +22,7 @@ const Projects = () => {
                 
                 {
                     projects.map((project,index)=>{
-                    return <Grid item xs={12} sm={4}><Project key={index} project={project}/></Grid>
+                    return <Grid key={index}  item xs={12} sm={4}><Project project={project}/></Grid>
                     
                 })
                 }

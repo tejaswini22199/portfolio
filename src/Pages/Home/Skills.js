@@ -12,7 +12,6 @@ import bootstrap from '../../assets/skillicons/bootstrap.png'
 import materialui from '../../assets/skillicons/materialui.png'
 import figma from '../../assets/skillicons/figma.png'
 import node from '../../assets/skillicons/node.png'
-// import mongodb from '../../assets/skillicons/mongodb.png'
 import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,15 +73,15 @@ const skills=[
 ]
 export default function CenteredGrid() {
   const classes = useStyles();
-  console.log(skills);
+
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
           {
              skills.map((skill,index)=>{
-                 console.log(skill);
+                 
                  return(
-            <Grid item xs={6} sm={3}>
+            <Grid key={index} item xs={6} sm={3}>
             <Paper className={classes.paper}>
                 <img src={skill.Image} alt={skill.Name}></img>
                 <Typography>

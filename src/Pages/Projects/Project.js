@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 
 export default function Project({project}) {
   const classes = useStyles();
-  console.log(project);
+  
   return (
     <Card className={classes.root}>
       <CardActionArea>

@@ -30,17 +30,13 @@ const Home = () => {
     return (
         <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
         <Typography paragraph>
-        Hello everyone, This is Tejaswini. I recently completed my under graduation in ECE from NITW.
-        I'm interested in doing projects which can solve our daily-life problems.I also did  
-        web applications related to the same. I'm looking for Full Time SDE opportunities.
-        I have keen interest in Data Structures and Algorithms and applying them using various technologies
-        to build web apps and mobile apps to solve daily life problems. I also participate in hackathons
-        and coding contests. I like to collaborate with like minded people and do projects.
+        Hi, I'm Tejaswini. I recently completed my graduation in ECE from NITW. I have worked with various technologies like Web development and App Development. I'm a programmer.
+        I'm currently interning as a front-end developer at a start-up. I'm looking for Full-time SDE opportunities. I'm always open to collaborate with like-minded people and do projects.
         </Typography>
         <Button style={{width:200,margin:20,}}variant="contained" color="primary" href="https://drive.google.com/file/d/18CKrruHOccymYYLHFP0JNjWGNIK1w2yD/view?usp=sharing">
         Resume
         </Button>
-        <Button variant="contained" color="default" >
+        <Button style={{margin:10}} variant="contained" color="default" >
          Tools and Technologies
         </Button>
         <Skills/>
@@ -49,3 +45,10 @@ const Home = () => {
 }
 
 export default Home
+
+// Over the recent years,
+// I participated in various hackathons and collaborated with cool developers and designers to create 
+// solutions for some prevalent problems. 
+// Over the recent years,
+// I participated in various hackathons and collaborated with cool developers and designers to create 
+// solutions for some prevalent problems. 
