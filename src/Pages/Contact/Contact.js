@@ -1,27 +1,49 @@
 import React from 'react'
-// import Link from '@material-ui/core/Link'
-// import email from '../../assets/contacticons/email.png'
-// import linkedin from '../../assets/contacticons/linkedin.png'
-// import medium from '../../assets/contacticons/medium.png'
-// import twitter from '../../assets/contacticons/twitter.png'
-
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Link from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
 import { Typography,} from '@material-ui/core'
-// import {makeStyles} from '@material-ui/core/styles'
-// const useStyles=makeStyles(()=>({
-//     contactform:{
-//         display:"flex",
-//         flexDirection:"column",
-//         margin:20,
-//     },
-//     formfield:{
-//         margin:10,
-//     },
-// }));
-const messages=[];
+import {makeStyles} from '@material-ui/core/styles'
+const useStyles=makeStyles(()=>({
+    // contactform:{
+    //     display:"flex",
+    //     flexDirection:"column",
+    //     margin:20,
+    // },
+    // formfield:{
+    //     margin:10,
+    // },
+    root:{
+        marginLeft:'25%',
+        marginRight:'25%',
+        display:"flex",
+        flexDirection:"column",
+        justifyContent:"center",
+        alignItems:"center"
+    },
+    icons:{
+        display:'flex',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    link:{
+        margin:'10px',
+    },
+    btn2:{
+        margin:"20px",
+       
+        
+      },
+      
+}));
+// const messages=[];
 
 const Contact = () => {
-    console.log(messages);
-    // const classes=useStyles();
+  //  console.log(messages);
+    const classes=useStyles();
     // const [formData,setformData]=useState(
     //     {
     //         name:'',
@@ -48,9 +70,9 @@ const Contact = () => {
   
     return (
         <>
-        <div>
+        <div className={classes.root}>
             
-            <Typography variant="h6">
+            <Typography className={classes.text} variant="h5">
             Looking to collaborate with me or Hire me?Great!
           
             </Typography>
@@ -64,20 +86,28 @@ const Contact = () => {
            
           
             {/* </form> */}
-              <p>Total Visitors</p>
+              
+
                 {/* <Link href="/">
                     <img src={email} alt="email"/>
-                </Link>
-                <Link href="https://www.linkedin.com/in/tejaswini-vakkalagaddi/">
-                    <img src={linkedin} alt="linkedin"/>
-                 </Link>
-                <Link href="https://powercoder1.medium.com/">
-                    <img src={medium} alt="medium"/>
-                </Link>
-                <Link href="https://twitter.com/Tejaswi30533550">
-                    <img src={twitter} alt="twiter"/>
                 </Link> */}
-            
+                <Button className={classes.btn2} variant="contained"  color="primary" href="mailto:tejaswini22199@gmail.com" >
+              
+               Mail me
+             
+                </Button>
+                <div className={classes.icons}>
+                <Link className={classes.link} href="https://www.linkedin.com/in/tejaswini-vakkalagaddi/">
+                    <LinkedInIcon fontSize="large"/>
+                 </Link>
+                
+                <Link className={classes.link}  href="https://twitter.com/Tejaswi30533550">
+                    <TwitterIcon fontSize="large"/>
+                </Link> 
+                <Link className={classes.link}  href="https://github.com/tejaswini22199">
+                    <GitHubIcon fontSize="large"/>
+                </Link>
+                </div>
 
         </div>
         </>
