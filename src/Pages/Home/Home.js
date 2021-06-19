@@ -65,8 +65,8 @@ const Home = () => {
            </div>
         :
         <Typography className={classes.textContent} paragraph>
-         Hi, I'm Tejaswini. I recently completed my graduation in ECE from NITW. But found computer science interesting because I love creating websites and apps. I have worked with technologies like Reactjs,Node js,HTML,CSS,Bootstrap,Material UI,React Native.
-         I'm looking for Full-time SDE opportunities. I'm always open to collaborate with like-minded people and do projects.
+         Hi, I'm Tejaswini. I recently completed my graduation in ECE from NITW. But found computer science interesting because I love creating websites and apps.
+         I'm looking for Full-time SDE opportunities. I'm always open to collaborate with like-minded people and do projects. I also do freelancing!!I can create a portfolio,website using mern stack or a react native app for you.
         </Typography>
         
 }

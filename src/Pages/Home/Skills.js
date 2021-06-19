@@ -16,6 +16,8 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  
+    margin:'50px',
   },
   paper: {
     padding: theme.spacing(2),
@@ -63,7 +65,7 @@ const skills=[
     },
     {
         Image:bootstrap,
-        Name:"Bootstrap"
+        Name:"Boot strap"
     },
     {
         Image:materialui,
@@ -81,7 +83,7 @@ export default function CenteredGrid() {
              skills.map((skill,index)=>{
                  
                  return(
-            <Grid key={index} item xs={6} sm={3}>
+            <Grid key={index} item xs={6} sm={2}>
             <Paper className={classes.paper}>
                 <img src={skill.Image} alt={skill.Name}></img>
                 <Typography>
