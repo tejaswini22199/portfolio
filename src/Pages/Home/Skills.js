@@ -12,6 +12,7 @@ import bootstrap from '../../assets/skillicons/bootstrap.png'
 import materialui from '../../assets/skillicons/materialui.png'
 import figma from '../../assets/skillicons/figma.png'
 import node from '../../assets/skillicons/node.png'
+import sql from '../../assets/skillicons/sql.png'
 import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,8 +40,8 @@ const skills=[
         Name:"Reactjs"
     },
     {
-        Image:react,
-        Name:"SQL"
+        Image:sql,
+        Name:"My-SQL"
     },
     {
         Image:node,

@@ -62,6 +62,7 @@ const Home = () => {
         ?
            <div className={classes.imageBackground}>
            <img src={tejaswini} alt="tejaswini" className={classes.image}/>
+           <h2>Software Engineer</h2>
            </div>
         :
         <Typography className={classes.textContent} paragraph>
