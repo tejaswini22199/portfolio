@@ -11,7 +11,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `Working with technologies like React-js,Material-UI to build front-end web application of a stealth start-up which is based on  ecommerce.`;
+      return `Worked with technologies like React-js,Material-UI to build front-end web application of a stealth start-up which is based on  ecommerce.`;
     case 1:
       return 'Participated in Various Hackathons and Have contributed to projects as a front-end web and application developer, working in domains like React-js and React-Native, collaborating with designers and backend developers to create solutions for various problems.';
     case 2:

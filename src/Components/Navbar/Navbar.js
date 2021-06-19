@@ -7,6 +7,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -80,6 +81,12 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  btn1:{
+    position:"absolute",
+    width:"200",
+    margin:"20",
+    right:"10px",
+  },
 }));
 
 export default function PersistentDrawerLeft() {
@@ -120,6 +127,9 @@ export default function PersistentDrawerLeft() {
           <Typography variant="h6" noWrap>
            Tejaswini 
           </Typography>
+          <Button className={classes.btn1} variant="contained" color="default" href="https://drive.google.com/file/d/1II7SAQdj4BVtZyq9erNGt0hHyG8hKOlk/view">
+           Resume
+        </Button>
         </Toolbar>
       </AppBar>
       <Drawer

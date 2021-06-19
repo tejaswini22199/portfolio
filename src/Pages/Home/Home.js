@@ -1,42 +1,77 @@
 
-// import clsx from 'clsx';
-// import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import React from 'react'
-import {Button} from '@material-ui/core'
+import React,{useState} from 'react';
+import {Button,Link} from '@material-ui/core';
+import tejaswini from '../../assets/home/tejaswini.jfif';
 import Skills from './Skills'
-
-// const useStyles = makeStyles((theme) => ({
-  //   content: {
-  //     flexGrow: 1,
-  //     padding: theme.spacing(3),
-  //     transition: theme.transitions.create('margin', {
-  //       easing: theme.transitions.easing.sharp,
-  //       duration: theme.transitions.duration.leavingScreen,
-  //     }),
-  //     marginLeft: -drawerWidth,
-  //   },
-  //   contentShift: {
-  //     transition: theme.transitions.create('margin', {
-  //       easing: theme.transitions.easing.easeOut,
-  //       duration: theme.transitions.duration.enteringScreen,
-  //     }),
-  //     marginLeft: 0,
-  //   },
-  // }));
-  
+ 
+  const useStyles = makeStyles((theme)=>({
+      root:{
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center',
+      },
+      head:{
+        display:"flex",
+        flexDirection:"row",
+        justifyContent:"space-around",
+      },
+      textContent:{
+         width:'70%',
+        backgroundColor:'#ffe6ff',
+        borderRadius:'15px',
+         padding:'10px',
+      },
+      imageBackground:{
+        backgroundColor:'#ffe6ff',
+        borderRadius:'15px',
+         padding:'10px',
+      },
+     
+      btn2:{
+        margin:"10",
+      },
+      image:{
+        height:'200px',
+        borderRadius:'15px',
+      },
+      link:{
+        marginRight:'10px',
+        cursor:'pointer',
+        textDecoration: 'none',
+        textColor:'pink',
+        fontSize:'20px',
+      }
+  }))
 const Home = () => {
-   
+   const [Home,setHome]=useState(true);
+   const classes=useStyles();
     return (
-        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-        <Typography paragraph>
-        Hi, I'm Tejaswini. I recently completed my graduation in ECE from NITW. I have worked with various technologies like Web development and App Development. I'm a programmer.
-        I'm currently interning as a front-end developer at a start-up. I'm looking for Full-time SDE opportunities. I'm always open to collaborate with like-minded people and do projects.
+        <div className={classes.root}>
+          <div className={classes.head}>
+          <Link to="/home" onClick={()=>setHome(true)} className={classes.link}>
+             Home
+          </Link>
+          <Link to="/about" onClick={()=>setHome(false)} className={classes.link}>
+            About
+          </Link>
+          </div>
+        { Home
+        ?
+           <div className={classes.imageBackground}>
+           <img src={tejaswini} alt="tejaswini" className={classes.image}/>
+           </div>
+        :
+        <Typography className={classes.textContent} paragraph>
+         Hi, I'm Tejaswini. I recently completed my graduation in ECE from NITW. But found computer science interesting because I love creating websites and apps. I have worked with technologies like Reactjs,Node js,HTML,CSS,Bootstrap,Material UI,React Native.
+         I'm looking for Full-time SDE opportunities. I'm always open to collaborate with like-minded people and do projects.
         </Typography>
-        <Button style={{width:200,margin:20,}}variant="contained" color="primary" href="https://drive.google.com/file/d/1T_-6-pXO9Pav08AfYpbxqzXXazM6VhKl/view?usp=sharing">
-        Resume
-        </Button>
-        <Button style={{margin:10}} variant="contained" color="default" >
+        
+}
+        
+        <Button className={classes.btn2} variant="contained"  color="primary" >
          Tools and Technologies
         </Button>
         <Skills/>
@@ -45,10 +80,3 @@ const Home = () => {
 }
 
 export default Home
-
-// Over the recent years,
-// I participated in various hackathons and collaborated with cool developers and designers to create 
-// solutions for some prevalent problems. 
-// Over the recent years,
-// I participated in various hackathons and collaborated with cool developers and designers to create 
-// solutions for some prevalent problems. 

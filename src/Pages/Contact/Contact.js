@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 // import Link from '@material-ui/core/Link'
 // import email from '../../assets/contacticons/email.png'
 // import linkedin from '../../assets/contacticons/linkedin.png'
@@ -17,25 +17,54 @@ const useStyles=makeStyles(()=>({
         margin:10,
     },
 }));
-
+const messages=[];
 
 const Contact = () => {
+    console.log(messages);
     const classes=useStyles();
+    const [formData,setformData]=useState(
+        {
+            name:'',
+            message:'',
+        }
+    );
+    // const [message,setMessage]=useState('');
+//     const handleChange=(e)=>{
+// //    setName(e.target.value);
+
+// }
+
+// const handleMessage=(e)=>{
+//     // setMessage(e.target.value);
+//}
+const submitHandler=(e)=>{
+    console.log(e);
+    console.log(formData);
+    console.log(messages);
+    if(formData!=null)
+    messages.push(formData);
+
+}
+  
     return (
         <>
         <div>
             
-            <Typography>
-            <h3>Looking to collaborate with me or Hire me?Great!</h3>
-            <h3>Feel free to Contact me on my socials</h3>
+            <Typography variant="h6">
+            Looking to collaborate with me or Hire me?Great!
+          
             </Typography>
-            <form className={classes.contactform} >
-            <TextField className={classes.formfield} required id="standard-basic" label="Name" autoComplete="off" />
-            <TextField className={classes.formfield} required id="standard-multiline-static" multiline rows={5} label="Drop your Message"/>
-            <Button variant="contained"color="primary" >
+            <form className={classes.contactform} onSubmit={(e)=>submitHandler(e)} >
+            <TextField className={classes.formfield} required id="standard-basic" label="Name" autoComplete="off" value={formData.name} onChange={(e)=>setformData({...formData,name:e.target.value})} />
+            <TextField className={classes.formfield} required id="standard-multiline-static" multiline rows={5} value={formData.message} onChange={(e)=>setformData({...formData,message:e.target.value})} label="Drop your Message"/>
+            <Button type="submit" variant="contained"color="primary" >
                 Submit
             </Button>
+            {/* <input type="submit" vaue="Submit"> */}
+           
+          
             </form>
+              <p>Total Visitors</p>
                 {/* <Link href="/">
                     <img src={email} alt="email"/>
                 </Link>
